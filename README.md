@@ -22,3 +22,6 @@ Create Models</br>
 5°
 Create Routes</br>
 Create Controllers</br>
+
+6°
+Create methods in the actions</br>
