@@ -18,3 +18,7 @@ Plain DB</br>
 
 4°
 Create Models</br>
+
+5°
+Create Routes</br>
+Create Controllers</br>
