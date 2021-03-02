@@ -27,4 +27,7 @@ Create Controllers</br>
 Create methods in the actions</br>
 
 7°</br>
-Get States - End Points</br>
+getStates - End Points</br>
+
+7°</br>
+Create middleware auth</br>
