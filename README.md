@@ -31,3 +31,6 @@ getStates - End Points</br>
 
 7°</br>
 Create middleware auth</br>
+
+7°</br>
+Create validators</br>
