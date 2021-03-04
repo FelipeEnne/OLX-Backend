@@ -29,8 +29,11 @@ Create methods in the actions</br>
 7°</br>
 getStates - End Points</br>
 
-7°</br>
+8°</br>
 Create middleware auth</br>
 
-7°</br>
+9°</br>
 Create validators</br>
+
+10°</br>
+Create signin</br>
