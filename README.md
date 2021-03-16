@@ -43,3 +43,6 @@ Create login</br>
 
 11°</br>
 Create info</br>
+
+12°</br>
+Change user info</br>
