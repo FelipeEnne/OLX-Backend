@@ -1,4 +1,6 @@
+const mongoose = require("mongoose");
 const { validationResult, matchedData } = require("express-validator");
+const bcrypt = require("bcrypt");
 
 const State = require("../models/State");
 const User = require("../model/User");
@@ -35,6 +37,7 @@ module.exports = {
       ads: adList,
     });
   },
+
   editAction: async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -55,6 +58,25 @@ module.exports = {
       updates.email = data.email;
     }
 
+    if (data.state) {
+      if (mongoose.Types.ObjectId.isValid(data.state)) {
+        const stateCheck = await State.findById(date.state);
+        if (!stateCheck) {
+          res.json({ error: "Estado não existe" });
+          return;
+        }
+        updates.state = data.state;
+      } else {
+        res.json({ error: "Estado inválido" });
+        return;
+      }
+    }
+
+    if (data.password) {
+      updates.passwordHash = await bcrypt.hash(data.password, 10);
+    }
+
     await User.findOneAndUpdate({ token: data.token }, { $set: updates });
+    res.json({});
   },
 };
